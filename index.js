@@ -71,7 +71,8 @@ app.post("/api/signin", async (req, res)=>{
 
 });
 
-app.get("/api/getallblogs/", async (req,res)=>{
+app.get("/api/getallblogs", async (req,res)=>{
+  console.log("bbbb")
   try{
     const blogs = await prisma.Blog.findMany({
       select: {
