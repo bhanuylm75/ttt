@@ -1,5 +1,8 @@
 import express from "express"
 import Jwt from "jsonwebtoken"
+
+import cors from "cors"
+app.use(cors());
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
@@ -475,7 +478,7 @@ app.delete("/api/delete/:id", async (req, res) => {
 
 
 
-app.listen(3003,()=>{
+app.listen(3009,()=>{
   console.log("server started")
 })
 
