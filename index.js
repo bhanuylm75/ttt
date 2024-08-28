@@ -2,11 +2,11 @@ import express from "express"
 import Jwt from "jsonwebtoken"
 
 import cors from "cors"
-app.use(cors());
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 const app = express();
+app.use(cors());
 import path from 'path';
 
 app.use(express.json())
